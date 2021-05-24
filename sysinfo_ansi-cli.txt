@@ -1,0 +1,46 @@
+***** HOSTNAME INFORMATION *****
+   Static hostname: ansi-cli
+         Icon name: computer-vm
+           Chassis: vm
+        Machine ID: a08b39940fe94c138218e8712a46b838
+           Boot ID: 4507ea0e00ab4ede8d1643afd0a17f4f
+    Virtualization: vmware
+  Operating System: Red Hat Enterprise Linux Server 7.8 (Maipo)
+       CPE OS Name: cpe:/o:redhat:enterprise_linux:7.8:GA:server
+            Kernel: Linux 3.10.0-1127.el7.x86_64
+      Architecture: x86-64
+
+***** KERNEL INFORMATION *****
+3.10.0-1127.el7.x86_64
+
+***** SYSTEM UPTIME AND LOAD *****
+ 06:35:21 up 55 min,  1 user,  load average: 0.40, 0.10, 0.07
+
+***** CURRENTLY LOGGED-IN USERS *****
+test     pts/0        2021-05-18 06:35 (192.168.29.130)
+
+***** CPU INFORMATION *****
+processor	: 0
+cpu MHz		: 3092.996
+
+***** USED MEMORY *****
+              total        used        free      shared  buff/cache   available
+Mem:           1819         165        1514           9         139        1506
+Swap:          2047           0        2047
+
+***** FILE SYSTEM USAGE *****
+Filesystem                      Size  Used Avail Use% Mounted on
+devtmpfs                        898M     0  898M   0% /dev
+tmpfs                           910M     0  910M   0% /dev/shm
+tmpfs                           910M  9.7M  901M   2% /run
+tmpfs                           910M     0  910M   0% /sys/fs/cgroup
+/dev/mapper/rhel-root            20G  1.4G   19G   7% /
+/dev/mapper/datavg-datalv       3.9G  8.0M  3.7G   1% /data
+/dev/mapper/datavg-opt_lv       2.0G  6.1M  1.8G   1% /opt
+/dev/mapper/datavg-opt_log      976M  2.6M  907M   1% /opt/log
+/dev/mapper/datavg-opt_log_log  976M  2.6M  907M   1% /opt/log/log
+/dev/sda1                      1014M  150M  865M  15% /boot
+tmpfs                           182M     0  182M   0% /run/user/0
+tmpfs                           182M     0  182M   0% /run/user/1000
+
+***** Done ******
