@@ -1,0 +1,29 @@
+---
+- name: Playbook to create user and validate 
+  become: true
+  hosts: Servers
+  remote_user: test
+  
+  tasks:
+    - name: find hostname result
+      command: "uname -n"
+      register: ns
+    - name: Copy  script to remote_machine
+      template: 
+        src=/root/ansible/sysinfo.sh 
+        dest=/tmp/sysinfo.sh 
+        mode=755
+    - name: Execute the script
+      command: sh /tmp/sysinfo.sh
+      register: sh
+    - name: copy the output to a local file
+      copy:
+        content: "{{ sh.stdout }}"
+        dest: ~/gith/sysinfo_{{ ns.stdout }}_$(date +"%m_%d_%Y").txt
+      delegate_to: localhost
+    - name: Copy output file to github
+      ansible.builtin.git:
+        repo: https://github.com/bala992/Ansible-Evidence.git
+        dest: /tmp/hello_{{ ns.stdout }}.txt
+#        separate_git_dir: /src/ansible-examples.git
+
